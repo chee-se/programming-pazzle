@@ -42,8 +42,8 @@ module Q49
 
     def reverse_mask
       @mask ||= (N * 2).times.map do |i|
-        base = "1" * 3 + "0" * 13 + "1" * 3 + "0" * 13
-        base.slice(i, 16).to_i(2)
+        base = "1" * 3 + "0" * (N * 2 -3) + "1" * 3 + "0" * (N * 2 - 3)
+        base.slice(i, N * 2).to_i(2)
       end
     end
   end
